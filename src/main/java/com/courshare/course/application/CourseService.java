@@ -214,7 +214,10 @@ public class CourseService {
                 l.getSectionId(),
                 l.getTitle(),
                 l.getDescription(),
+                l.getType(),
                 l.getVideoUrl(),
+                l.getMediaUrl(),
+                l.getContent(),
                 l.getOrderIndex()
         );
     }

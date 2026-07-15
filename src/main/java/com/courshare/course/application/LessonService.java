@@ -55,7 +55,10 @@ public class LessonService {
                 sectionId,
                 request.title(),
                 request.description(),
+                request.type(),
                 request.videoUrl(),
+                request.mediaUrl(),
+                request.content(),
                 request.orderIndex()
         );
 
@@ -92,7 +95,10 @@ public class LessonService {
 
         lesson.setTitle(request.title());
         lesson.setDescription(request.description());
+        lesson.setType(request.type());
         lesson.setVideoUrl(request.videoUrl());
+        lesson.setMediaUrl(request.mediaUrl());
+        lesson.setContent(request.content());
         lesson.setOrderIndex(request.orderIndex());
 
         lesson = lessonRepository.save(lesson);
@@ -174,7 +180,10 @@ public class LessonService {
                 l.getSectionId(),
                 l.getTitle(),
                 l.getDescription(),
+                l.getType(),
                 l.getVideoUrl(),
+                l.getMediaUrl(),
+                l.getContent(),
                 l.getOrderIndex()
         );
     }

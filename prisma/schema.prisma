@@ -46,7 +46,10 @@ model Lesson {
   sectionId   String  @map("section_id")
   title       String
   description String?
+  type        String  @default("VIDEO")
   videoUrl    String? @map("video_url")
+  mediaUrl    String? @map("media_url")
+  content     String?
   order       Int     @default(0)
   section     Section @relation(fields: [sectionId], references: [id], onDelete: Cascade)
 

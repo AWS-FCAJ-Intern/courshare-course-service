@@ -5,7 +5,10 @@ public record LessonResponse(
         String sectionId,
         String title,
         String description,
+        String type,
         String videoUrl,
+        String mediaUrl,
+        String content,
         int orderIndex
 ) {
 }
