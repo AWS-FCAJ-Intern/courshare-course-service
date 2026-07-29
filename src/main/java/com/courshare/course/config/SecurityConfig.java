@@ -32,7 +32,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.GET, "/courses/{id}").permitAll()
                         .requestMatchers(HttpMethod.GET, "/instructor/summary").hasRole("INSTRUCTOR")
                         .requestMatchers(HttpMethod.GET, "/courses/{id}/stats").hasRole("INSTRUCTOR")
-                        .requestMatchers("/courses/**").hasRole("INSTRUCTOR")
+                        .requestMatchers("/courses", "/courses/**").hasRole("INSTRUCTOR")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(gatewayAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
