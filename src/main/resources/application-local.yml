@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/course_db
+    url: jdbc:postgresql://localhost:5433/course_db
     username: courshare
     password: courshare
   jpa:
