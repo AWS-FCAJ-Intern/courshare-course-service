@@ -47,7 +47,7 @@ public class Course {
     @JoinColumn(name = "category_id", insertable = false, updatable = false)
     private Category category;
 
-    @OneToMany(mappedBy = "course")
+    @OneToMany(mappedBy = "course", cascade = jakarta.persistence.CascadeType.ALL, orphanRemoval = true)
     @OrderBy("orderIndex ASC")
     private List<Section> sections = new ArrayList<>();
 
