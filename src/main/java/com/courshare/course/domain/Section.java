@@ -34,7 +34,7 @@ public class Section {
     @JoinColumn(name = "course_id", insertable = false, updatable = false)
     private Course course;
 
-    @OneToMany(mappedBy = "section")
+    @OneToMany(mappedBy = "section", cascade = jakarta.persistence.CascadeType.ALL, orphanRemoval = true)
     @OrderBy("orderIndex ASC")
     private List<Lesson> lessons = new ArrayList<>();
 
